@@ -37,7 +37,7 @@ console.log(myArray7);
 let myArray8 = [];
 
 // push y pop
-myArray8.push('David');
+myArray8.push('David');// añade un elemento al final del array
 myArray8.push('Niño');
 myArray8.push('pipe');
 myArray8.push(24);  
@@ -88,6 +88,6 @@ let myArray15 = myArray14.slice(2, 5); // devuelve una copia del array desde el 
 console.log(myArray14); // imprime el array original
 console.log(myArray15); // imprime el array copiado
 
-let myArray16 = myArray14.splice(2, 5); // elimina los elementos del array desde el índice 2 hasta el índice 5
+let myArray16 = myArray14.splice(2, 5); // elimina 5 elementos desde el índice 2
 console.log(myArray14); // imprime el array original
 console.log(myArray16); // imprime el array eliminado
