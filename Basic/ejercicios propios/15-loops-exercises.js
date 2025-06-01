@@ -90,7 +90,6 @@ let newString = ''
 
 for (let index1 of myString1) {
     newString = index1 + newString
-    y --
 }
 
 console.log(newString)
