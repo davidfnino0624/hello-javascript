@@ -198,6 +198,55 @@ anyToFloat(myNumbersArray);
 
 // 9. Crea una función que verifique si un objeto tiene una propiedad específica y lance una excepción personalizada
 
+class CustomError3 extends Error{
+    constructor(message){
+        super(message);
+        this.name = `PropertyNotFoundError`;
+    }
+}
 
+function checkProperty (property){
+    let obj = { 
+        name: "John",
+        age: 30 
+    };
+    let propertyToCheck = property;
+
+    try {
+        if (!obj.hasOwnProperty(propertyToCheck)) {
+            throw new CustomError3(`The property "${propertyToCheck}" does not exist in the object.`);
+        } else {
+            console.log(`The property "${propertyToCheck}" exists in the object.`);
+        }
+    } catch (error) {
+        console.log(`${error.name}: ${error.message}`);
+    }finally {
+        console.log("Property check completed.");
+    }
+}
+
+checkProperty("name");
+checkProperty("address");
+checkProperty("age");
 
 // 10. Crea una función que realice reintentos en caso de error hasta un máximo de 10
+
+function retryOperation(functionUsed, maxRetries = 10) {
+    let attempts = 0;
+    while (attempts < maxRetries) {
+        try {
+            functionUsed(); // Replace with the function you want to retry
+            console.log("Operation successful.");
+            break; // Exit loop if operation is successful
+        } catch (error) {
+            attempts++;
+            console.log(`Attempt ${attempts} failed: ${error.message}`);
+            if (attempts === maxRetries) {
+                console.log("Max retries reached. Operation failed.");
+            }
+        }
+    }
+}
+
+// Example usage of retryOperation
+retryOperation(() => deposit(100001)); // This will throw an error and be retried
