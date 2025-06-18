@@ -54,14 +54,64 @@ displayProducts(list);
 
 // 5. Utiliza group
 
-
+console.group(`car information`);
+console.log(`Make: Toyota`);
+console.log(`Model: Corolla`);
+console.log(`Year: 2023`);
+console.group(`Specifications`);
+console.log(`Engine: 1.8L`);
+console.log(`Transmission: Automatic`);
+console.groupEnd();
 
 // 6. Utiliza time
+console.time(`time to iterate over array`);
+
+let numbers = [1, 2, 3, 4, 5];
+
+for (let i = 0; i < numbers.length; i++) {
+    // Simulating some work with each number
+    console.log(`Processing number: ${numbers[i]}`);
+}
+console.timeEnd(`time to iterate over array`);
 
 // 7. Valida con assert si un número es positivo
 
+function validatePositiveNumber(number) {
+    console.assert(number >= 0, `Error: ${number} is not a positive number.`);
+    if (number >= 0) {
+        console.log(`Good job! ${number} is a positive number.`);
+    }
+}
+
 // 8. Utiliza count
+
+console.count(`transaction`);
+console.count(`transaction`);
+console.count(`transaction`);
+console.count(`transaction`);
+console.countReset(`transaction`);
+console.count(`transaction`);
 
 // 9. Utiliza trace
 
+function traceFunction(functionName) {
+    console.trace(functionName)
+}
+
+//traceFunction(validatePositiveNumber(15))
+
+
 // 10. Utiliza clear
+
+//console.clear();
+
+// 11. Utiliza debug
+
+function debugExample() {
+    console.debug(`This is a debug message.`);
+    let x = 10;
+    let y = 20;
+    console.debug(`x: ${x}, y: ${y}`);
+}
+
+debugExample();
