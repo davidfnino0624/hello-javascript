@@ -1,6 +1,6 @@
 // 1. Crea una clase que reciba dos propiedades
 
-class Person {
+export default class Person {
     constructor(name, age) {
         this.name = name;
         this.age = age;
@@ -39,7 +39,7 @@ Person.greet('David'); // Mostrando el saludo
 
 // 6. Crea una clase que haga uso de herencia
 
-class Employee extends Person {
+export class Employee extends Person {
     constructor(name, age, position, salary, bankAccount) {
         super(name, age);
         this.position = position;

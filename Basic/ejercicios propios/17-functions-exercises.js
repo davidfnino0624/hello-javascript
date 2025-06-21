@@ -83,13 +83,13 @@ console.log(primeNumbers(32))
 let myArray10 = new Array ()
 
 function primeNumbersBeetewnAFrame (number1, number2) {
-
+    let myArray = new Array ()
     for (let y = number1; y <= number2; y++) {
         if (primeNumbers(y)) {
-            myArray10.push(y)
+            myArray.push(y)
         }
     }
-    console.log(`La lista de los numeros primos en este rango es: ${myArray10}.`)
+    console.log(`La lista de los numeros primos en este rango es: ${myArray}.`)
 }
 
 primeNumbersBeetewnAFrame(30, 75)
