@@ -24,3 +24,19 @@ Vídeo: https://youtu.be/1glVfFxj8a4?t=14146
 // 9. Crea una función que reciba una cadena de texto y devuelva la misma cadena con las palabras en orden inverso
 
 // 10. Crea una función que calcule el factorial de un número dado
+
+export function countVowels (string) {
+    
+    let word = string
+
+    let contador = 0
+
+    let vocales = 'aeiou'
+
+    for(let value of word){
+        if (vocales.includes(value)){
+        contador ++
+        }
+    }
+    console.log(`la cantidad de vocales es: ${contador}.`)
+}
