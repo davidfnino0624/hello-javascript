@@ -115,7 +115,7 @@ cofirmElements(firstArray, secondArray)
 
 // 7. Crea una función que reciba un array de números y devuelva la suma de todos los números pares
 
-function plusEvenNumbers(array,value4){
+function plusEvenNumbers(array){
     let suma = 0
     for (value4 of array){
         if (value4 % 2 == 0) {
